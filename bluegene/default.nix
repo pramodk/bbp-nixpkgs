@@ -359,7 +359,13 @@ let
 
         bgq-libxml2-gcc47 = all-pkgs-bgq-gcc47.libxml2;
               
-  
+        bgq-osu-bench-mpi-gcc47 = all-pkgs-bgq-gcc47.osu-mpi-bench.override {
+            stdenv = bgq-stdenv-gcc47;
+            mpi = ibm-mpi;
+            mpiOneOnly = true;
+        };
+
+ 
         bgq-boost = (boost.overrideDerivation (oldAttrs:  {
             patches = [ boost/boost-bgq.patch ];
 

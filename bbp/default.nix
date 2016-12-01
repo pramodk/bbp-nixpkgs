@@ -49,10 +49,13 @@ let
 			mpi = bbp-mpi;
 		};
 
-	intel-mpi-bench-rdma = pkgs.intel-mpi-bench.override {
-		mpi = bbp-mpi-rdma;
-	};
+        intel-mpi-bench-rdma = pkgs.intel-mpi-bench.override {
+            mpi = bbp-mpi-rdma;
+        };
 
+        osu-mpi-bench-rdma = pkgs.osu-mpi-bench.override {
+            mpi = bbp-mpi-rdma;
+        };
 
 
         ## override component that need bbp-mpi

@@ -56,7 +56,7 @@ stdenv.mkDerivation rec {
 
   postInstall = ''
 	## add pmi directly in the libmvapich2 path to avoid 
-        ## modules incompatibilities
+    ## modules incompatibilities
 	${if (slurm-llnl!= null) then ''cp ${slurm-llnl}/lib/libpmi* $out/lib/'' else '' ''}
 
 
